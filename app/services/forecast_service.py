@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error
 from app.models.product import Product
 from app.models.sales_history import SalesHistory
-from app import db, cache
+from app.main import db, cache
 
 class ForecastService:
     def __init__(self):

@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from app.models.product import Product
-from app import cache, db
+from app.main import cache, db
 
 inventory_bp = Blueprint('inventory', __name__)
 

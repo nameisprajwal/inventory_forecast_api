@@ -7,10 +7,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENV FLASK_APP=app
+ENV FLASK_APP=app.main
 ENV FLASK_ENV=production
 ENV PYTHONUNBUFFERED=1
 
 EXPOSE 5000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"] 
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app.main:app"] 

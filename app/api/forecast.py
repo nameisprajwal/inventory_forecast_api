@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from app.services.forecast_service import ForecastService
 from app.models.product import Product
-from app import cache, db
+from app.main import cache, db
 
 forecast_bp = Blueprint('forecast', __name__)
 forecast_service = ForecastService()

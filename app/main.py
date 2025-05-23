@@ -1,4 +1,3 @@
-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
@@ -27,7 +26,7 @@ def create_app():
     # Initialize extensions with app
     db.init_app(app)
     ma.init_app(app)
-    migrate.init_app(app)
+    migrate.init_app(app, db)
     cache.init_app(app)
     
     # Register blueprints
@@ -42,3 +41,6 @@ def create_app():
         db.create_all()
     
     return app
+
+# Create the application instance
+app = create_app() 

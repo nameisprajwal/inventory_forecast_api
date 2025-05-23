@@ -1,6 +1,6 @@
 import pytest
 from datetime import datetime, timedelta
-from app import create_app, db
+from app.main import create_app, db
 from app.models.product import Product
 from app.models.sales_history import SalesHistory
 
