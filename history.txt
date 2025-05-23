@@ -1,0 +1,60 @@
+cd TAO\H2F\May2025
+git clone 'https://github.com/Aparna20071996/StockMaster.git'
+git clone https://github.com/Aparna20071996/StockMaster.git
+ls
+dir
+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
+cd StockMaster
+dir
+npm install
+npm run db:push
+npm run dev
+git status
+npm run dev
+netstat -aon | findstr LISTENING
+netstat -aon | findstr :5000
+tasklist | findstr 6388
+npm run dev
+nvm install 20
+echo %PATH%
+set PATH=C:\Users\10729884\Tools\node-v20.9.0;%PATH%
+echo %PATH%
+node -v
+npm install
+npm run dev
+y
+doskey /history > history.txt
+
+
+# Add a new directory to the PATH environment variable
+$Node20Path = "C:\Users\10729884\Tools\node-v20.9.0"
+$Env:PATH = "$Node20Path;$Env:PATH"
+
+# Verify the updated PATH
+Write-Output "Updated PATH: $Env:PATH"
+
+
+PS C:\Users\10729884\TAO\H2F\May2025\StockMaster> Get-History
+>> 
+
+  Id CommandLine
+  -- -----------
+   1 try { . "c:\Users\10729884\Tools\VSCode-1.99.1\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+   2 ls
+   3 set PATH=C:\Users\10729884\Tools\node-v20.9.0;%PATH%
+   4 $Node20Path = "C:\Users\10729884\Tools\node-v20.9.0"
+   5 Write-Output "Current PATH: $Env:PATH"
+   6 $Env:PATH = "$Node20Path;$Env:PATH"
+   7 Write-Output "Updated PATH: $Env:PATH"
+   8 npm -version
+   9 node -v
+  10 npm run dev
+  11 $env:DATABASE_URL=postgres://postgres:postgres@localhost:5432/StockMasterDB
+  12 DATABASE_URL="postgres://postgres:postgres@localhost:5432/StockMasterDB"
+  13 $env:DATABASE_URL="postgres://postgres:postgres@localhost:5432/StockMasterDB"
+  14 Write-Output "Updated PATH: $Env:DATABASE_URL"
+  15 npm run dev
+
+
+
+  13 $env:DATABASE_URL="postgres://postgres:postgres@NANXCV012738407:5432/StockMasterDB"
