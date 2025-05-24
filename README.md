@@ -13,6 +13,13 @@ A Flask-based REST API for inventory demand forecasting that analyzes historical
 
 ## API Endpoints
 
+```
+/api/forecast/
+/api/forecast/1
+/api/forecast/calculate
+/api/inventory/alert
+```
+
 ### Forecast Endpoints
 
 #### GET /api/forecast
@@ -235,11 +242,3 @@ The API includes comprehensive error handling for:
 - Database connection issues
 - Calculation errors
 
-## License
-
-MIT License 
-
-/api/forecast/
-/api/forecast/1
-/api/forecast/calculate
-/api/inventory/alert
