@@ -238,3 +238,8 @@ The API includes comprehensive error handling for:
 ## License
 
 MIT License 
+
+/api/forecast/
+/api/forecast/1
+/api/forecast/calculate
+/api/inventory/alert

@@ -7,7 +7,6 @@ inventory_bp = Blueprint('inventory', __name__)
 @inventory_bp.route('/alert', methods=['GET'])
 @cache.cached(timeout=300)
 def get_inventory_alerts():
-    """Get products that need restocking"""
     try:
         products = Product.query.all()
         alerts = []

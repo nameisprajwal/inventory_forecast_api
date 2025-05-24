@@ -1,0 +1,19 @@
+10:56AM 24 May 2025
+Q
+We have that set of basic api around the 'get_product_forecast(product_id)',
+now focus on making this model better, adding more parameters/algorithms/data and training
+OR
+build an image processor module
+OR
+a more supervised solution above : process text analysis and factor in that - sentiment analysis, nlp, etc.
+OR
+anything else?
+
+
+A
+for PoC
+1. feature > implementation
+-> since output outlook is same, let us try features.
+
+
+

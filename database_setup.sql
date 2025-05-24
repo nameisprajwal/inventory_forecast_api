@@ -1,4 +1,3 @@
--- Create Products table
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -15,7 +14,6 @@ CREATE TABLE products (
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
--- Create Sales History table
 CREATE TABLE sales_history (
     id SERIAL PRIMARY KEY,
     product_id INTEGER REFERENCES products(id),
@@ -28,18 +26,15 @@ CREATE TABLE sales_history (
         ON DELETE CASCADE
 );
 
--- Create indexes for better query performance
 CREATE INDEX idx_products_sku ON products(sku);
 CREATE INDEX idx_products_category ON products(category);
 CREATE INDEX idx_sales_history_product_id ON sales_history(product_id);
 CREATE INDEX idx_sales_history_sale_date ON sales_history(sale_date);
 
--- Sample product data inserts
 INSERT INTO products (
     name, sku, category, vendor, price, 
     in_stock, min_stock, description, location
 ) VALUES 
--- Electronics category
 (
     'Electronics Product 1', 
     'SKU4001', 
@@ -62,7 +57,6 @@ INSERT INTO products (
     'Description for Electronics Product 2', 
     'Aisle 4'
 ),
--- Furniture category
 (
     'Furniture Product 1', 
     'SKU5001', 
@@ -86,25 +80,20 @@ INSERT INTO products (
     'Aisle 5'
 );
 
--- Sample sales history data
 INSERT INTO sales_history (
     product_id, quantity, sale_date, price_at_sale
 ) VALUES 
--- Sales for Electronics Product 1
 (1, 5, CURRENT_TIMESTAMP - INTERVAL '30 days', 20.00),
 (1, 8, CURRENT_TIMESTAMP - INTERVAL '25 days', 20.00),
 (1, 12, CURRENT_TIMESTAMP - INTERVAL '20 days', 19.99),
 (1, 6, CURRENT_TIMESTAMP - INTERVAL '15 days', 19.99),
--- Sales for Electronics Product 2
 (2, 4, CURRENT_TIMESTAMP - INTERVAL '30 days', 25.00),
 (2, 6, CURRENT_TIMESTAMP - INTERVAL '25 days', 25.00),
 (2, 8, CURRENT_TIMESTAMP - INTERVAL '20 days', 24.99),
--- Sales for Furniture Product 1
 (3, 2, CURRENT_TIMESTAMP - INTERVAL '30 days', 22.50),
 (3, 3, CURRENT_TIMESTAMP - INTERVAL '20 days', 22.50),
 (3, 4, CURRENT_TIMESTAMP - INTERVAL '10 days', 22.99);
 
--- Create a trigger to automatically update the updated_at timestamp
 CREATE OR REPLACE FUNCTION update_updated_at_column()
 RETURNS TRIGGER AS $$
 BEGIN

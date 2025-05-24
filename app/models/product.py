@@ -18,18 +18,15 @@ class Product(db.Model):
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
 
-    # Relationships
     sales_history = db.relationship('SalesHistory', backref='product', lazy=True)
 
     def __repr__(self):
         return f'<Product {self.name}>'
 
     def needs_restock(self):
-        """Check if product needs restocking based on min_stock threshold"""
         return self.in_stock <= (self.min_stock * 1.5)
 
     def to_dict(self):
-        """Convert product to dictionary format"""
         return {
             'id': self.id,
             'name': self.name,
